@@ -4,6 +4,8 @@
 
 using namespace std;
 
+extern "C" int sum(int a, int b);
+
 //Constructors:
 BinStr::BinStr(int l): MyString(l){
     cout<<"BinStr::BinStr(int l): MyString(l)\n";
@@ -37,6 +39,7 @@ BinStr::~BinStr(){
 
 //Methods:
 bool BinStr::checkSymbol(char c){
+    cout<<"sum = "<<sum(1, 2)<<endl;
     return (c=='1' || c=='0');
 }
 void BinStr::invert(){
